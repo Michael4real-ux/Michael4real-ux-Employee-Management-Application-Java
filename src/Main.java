@@ -21,6 +21,7 @@ public class Main {
       switch(choice){
           case 1:
               System.out.println("Add Employee");
+              service.addEmployee();
               break;
           case 2:
               System.out.println("View Employee");
@@ -32,6 +33,7 @@ public class Main {
               break;
           case 4:
               System.out.println("Delete Employee");
+              service.deleteEmployee();
               break;
           case 5:
               System.out.println("View All Employee");
