@@ -1,8 +1,6 @@
 import java.util.Scanner;
 
 public class Main {
-    EmployeeService service = new EmployeeService();
-
     static boolean ordering = true;
     public static void menu(){
         System.out.println("**************Welcome To Employee Management System***************"
@@ -14,6 +12,7 @@ public class Main {
                 + "\n6. Exist ");
     };
     public static void main(String[] args) {
+        EmployeeService service = new  EmployeeService();
         Scanner scanner = new Scanner(System.in);
      do{
          menu();
@@ -34,6 +33,7 @@ public class Main {
               break;
           case 5:
               System.out.println("View All Employee");
+              service.viewAllEmployees();
               break;
           case 6:
               System.out.println("Thank you for using our employee management app");
