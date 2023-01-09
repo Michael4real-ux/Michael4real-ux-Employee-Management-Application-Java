@@ -28,6 +28,7 @@ public class Main {
               break;
           case 3:
               System.out.println("Update Employee");
+              service.updateEmployee();
               break;
           case 4:
               System.out.println("Delete Employee");

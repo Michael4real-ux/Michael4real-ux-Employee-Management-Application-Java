@@ -39,7 +39,7 @@ public class EmployeeService {
     // View employee based on their id
     public void viewEmployee(){
         System.out.printf("Enter id: ");
-        id = scanner.nextInt();
+        id = Integer.parseInt(scanner.nextLine());
         for(Employee emp:employeeService){
             if(emp.getId() == id){
                 System.out.println(emp);
@@ -48,6 +48,33 @@ public class EmployeeService {
         }
         if(!found){
             System.out.println("Employee with this id is not present");
+        } else{
+            System.out.println("Employee found");
+        }
+    }
+
+    // Update Employee
+    public void updateEmployee(){
+        System.out.printf("Enter id: ");
+        id = Integer.parseInt(scanner.nextLine());
+        boolean found= false;
+        for(Employee emp:employeeService){
+            if(emp.getId() ==id){
+                System.out.printf("Enter name: ");
+                name = scanner.nextLine();
+                System.out.printf("Enter new salary: ");
+                sal = Double.parseDouble(scanner.nextLine());
+                emp.setName(name);
+                emp.setSalary(sal);
+                System.out.println("Updated Details of employee are: " + emp);
+                found = true;
+            }
+
+        }
+        if(!found){
+            System.out.println("Employee is not present");
+        }else{
+           System.out.println("Employee updated successfully !!");
         }
     }
 
