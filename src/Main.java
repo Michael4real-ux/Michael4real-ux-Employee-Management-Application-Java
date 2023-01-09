@@ -17,13 +17,14 @@ public class Main {
      do{
          menu();
          System.out.printf("Enter your Choice: ");
-         int choice = scanner .nextInt();
+         int choice = scanner.nextInt();
       switch(choice){
           case 1:
               System.out.println("Add Employee");
               break;
           case 2:
               System.out.println("View Employee");
+              service.viewEmployee();
               break;
           case 3:
               System.out.println("Update Employee");

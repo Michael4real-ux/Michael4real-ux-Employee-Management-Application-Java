@@ -36,5 +36,19 @@ public class EmployeeService {
             System.out.println(emp);
         }
     }
+    // View employee based on their id
+    public void viewEmployee(){
+        System.out.printf("Enter id: ");
+        id = scanner.nextInt();
+        for(Employee emp:employeeService){
+            if(emp.getId() == id){
+                System.out.println(emp);
+                found = true;
+            }
+        }
+        if(!found){
+            System.out.println("Employee with this id is not present");
+        }
+    }
 
 }
